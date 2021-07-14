@@ -1,0 +1,96 @@
+.navbar__container{
+    background: darken($color: $primary, $amount: 2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out .3s;
+}
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    color: lighten($color: $secondary, $amount: 10);
+    justify-content: space-around;
+    padding: 20px 0;
+    
+}
+.navbar__button{
+    font-size: 30px;
+}
+.navbar__logo-item{
+    font-family: $secondary-font;
+    font-size: 2rem;
+}
+.navbar__menu{
+    flex: 0 1 40%;
+}
+
+.navbar__menu-list{
+    display: flex;
+    flex-direction: column;
+    
+}
+.navbar__menu-list-item{
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 5px 10px -6px lighten($color: $primary, $amount: 5);
+}
+.navbar__menu-link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.navbar__menu-link-active{
+    color:$secondary;
+    transition: color .5s ease;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: #{$tablet}) {
+    .d-none{
+        display: none;
+    }
+    .navbar__container{
+        position: relative;
+    }
+    .navbar__menu{
+        position: absolute;
+        top: 10vh;
+        width: 100%;
+        z-index: 10;
+    }
+    .navbar__menu-list{
+        width: 100vw;
+        background: darken($color: $primary, $amount: 4);
+    }
+    .navbar__menu-list-item{
+        width: 100%;
+        cursor: pointer;
+        &:hover{
+            background: lighten($color: $secondary, $amount: 8);
+            transition: all ease-in-out .9s;
+        }
+    }
+    .navbar__menu-link{
+        display: block;
+    }
+}
+
+
+@include tablet{
+    .navbar__container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;   
+    } 
+    .navbar__button{
+        display: none;
+    }
+    .navbar__menu-list{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar__menu-list-item{
+        box-shadow: none;
+    }
+}

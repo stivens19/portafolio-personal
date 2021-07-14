@@ -1,0 +1,95 @@
+.services__container{
+    min-height: 95vh;
+    width: 100%;
+    background: darken($color: $primary, $amount: 8);
+    position: relative;
+    padding-top: 8vh;
+}
+.svg-services{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+.services__description{
+    h3{
+        color: white;
+        font-size: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+    p{
+        text-align: center;
+        color: $white;
+        margin-top: 10px;
+    }
+    span{
+        text-align: center;
+        display: block;
+        font-family: $primary-font;
+        text-transform: uppercase;
+    }
+}
+.services__flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.services__icon{
+    font-size: 30px;
+    i{
+        color: lighten($color: $tertiary, $amount: 20);
+    }
+}
+.service__title{
+    font-size: 16px;
+    margin-top: 5px;
+    font-family: $secondary;
+    color: white;
+}
+.services__item{
+    box-shadow: -5px 4px 5px 0px $primary;
+    -webkit-box-shadow: -5px 4px 5px 0px $primary;
+    -moz-box-shadow: -5px 4px 5px 0px $primary;
+    padding: 30px;
+    margin-bottom: 10px;
+    background: lighten($color: $primary, $amount: 10);
+    z-index: 2;
+    p{
+        color: $white;
+    }
+}
+.p-main-service{
+    padding-left: 22vw;
+    padding-right: 22vw;
+}
+
+@media only screen and (max-width: #{$tablet}) {
+    .p-main-service{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }  
+    .services__item{
+        margin-top: 5px;
+    }
+}
+@include tablet{
+    .p-main-service{
+        padding-left: 15vw;
+        padding-right: 15vw;
+    }
+    .services__flex-container{
+        margin-top: 15px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .services__item{
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+@include escritorio{
+    .services__item{
+        flex: 0 1 calc(33.3% - 10px);
+    }
+}

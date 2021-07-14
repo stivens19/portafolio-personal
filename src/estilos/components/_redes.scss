@@ -1,0 +1,56 @@
+.redes__container{
+    min-height: 95vh;
+    width: 100%;
+    padding-top: 8vh;
+    background: darken($color: $primary, $amount: 8);
+}
+
+.footer__bg{
+    background: #1f2235a4;
+    padding: 30px;
+   margin-top: 10vh;
+   max-width: 100%;
+}
+.social__buttons{
+
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    margin: 10vh auto;
+    width: 60%;
+    flex-wrap: wrap;
+}
+.icon__social{
+    &:hover{
+        background: darken($color: $secondary, $amount: 2)
+    }
+    margin-right: 10px;
+    color: $white;
+    width: 80px;
+    height: 80px;
+    padding: 25px;
+    border: solid 2px lighten($color: $primary, $amount: 10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+@media only screen and (max-width: #{$tablet}) {
+    .social__buttons{
+        width: 100%;
+    }
+    .icon__social{
+        max-width: 100%;
+    }
+}
+.footer__small{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    height: 30vh;
+    text-align: center;
+}

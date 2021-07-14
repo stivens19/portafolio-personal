@@ -1,0 +1,105 @@
+.contact__container{
+    min-height: 95vh;
+    width: 100%;
+    position: relative;
+    padding-top: 8vh;
+}
+.contact_file{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.contact__column{
+    background: lighten($color: $primary, $amount: 10);
+    border-radius: 2px;
+    padding: 15px;
+    display: flex;
+    -webkit-box-shadow: -3px -3px 5px 0px $primary;
+    -moz-box-shadow:    -3px -3px 5px 0px $primary;
+    box-shadow:         -3px -3px 5px 0px $primary;
+}
+.maps{
+    font-size: 40px;
+    color:#f3747c;
+}
+.whatsapp{
+    font-size: 40px;
+    color: $tertiary;
+}
+.email{
+    font-size: 40px;
+    color: #f3747c;
+}
+.contact__description{
+    color: white;
+    h3{
+        font-family: $secondary-font;
+    }
+    p{
+        color: $white;
+        font-size: 14px;
+    }
+}
+.contact__icon{
+    margin-right: 15px;
+}
+@include tablet{
+    .contact_file{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    } 
+    .contact__column{
+        flex: 1 1 calc(33.3% - 10px);
+        
+    }
+}
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.first_date{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    input{
+        flex: 1 1 calc(50% - 5px);
+       
+    }
+
+}
+.contact__btn{
+    border-radius: 5px;
+    width: 80%;
+    background: darken($color: $secondary, $amount: 10);
+    border: none;
+    margin-left: 25px;
+    font-family: $secondary-font;
+}
+@include tablet{
+    .contact__btn{
+        width: 20%;
+        margin-left: 10px;
+    }
+    .first_date{
+        flex-direction: row;
+    }
+}
+.contact__form-input{
+    margin: 8px;
+    background: lighten($color: $primary, $amount: 2);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    transition: all ease-in-out .3s;
+    padding: 12px;
+    color: $white;
+    font-family: $secondary-font;
+    font-size: 15px;
+    &:focus{
+        transition: all ease-in-out .3s;
+        border-bottom: solid 3px lighten($color: $primary, $amount: 8);
+    }
+}

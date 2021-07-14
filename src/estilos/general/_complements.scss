@@ -1,0 +1,65 @@
+.pointer{
+    cursor: pointer;
+}
+.text-secondary{
+    color: lighten($color: $secondary, $amount: 14);
+}
+.mt-carousel{
+    margin-top: 30px;
+}
+.text-secondary{
+    margin-top: 10px;
+    color: lighten($color: $secondary, $amount: 15);
+    text-align: center;
+}
+.btn{
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    transition: all ease .2s;
+    text-decoration: none;
+    &:hover{
+        background: lighten($color: $secondary, $amount: 13);
+        transition: all ease .3s;
+    }
+}
+.m-1{
+    margin: 5px;
+}
+.mt-1{
+    margin-top: 5px;
+}
+.mt-2{
+    margin-top: 30px;
+}
+.p-main{
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+.p-fixed{
+    transition: all ease-in-out .3s;
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    z-index: 12;
+    background: lighten($color:$primary, $amount: 10)!important;
+}
+.float-button{
+    margin-right: 3vw;
+    margin-bottom: 3vh;
+    position: fixed!important;
+    bottom: 0;
+    right:0;
+    z-index: 12;
+    padding: 10px;
+    background: lighten($color:$secondary, $amount: 15)!important;
+    border-radius: 2px;
+    i{
+        font-size: 35px;
+        color: white;
+    }
+}
+
+.flex-nav{
+    justify-content: flex-end!important;
+}

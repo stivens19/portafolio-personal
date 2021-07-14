@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    
+}
+body{
+    background: $primary;
+    /*background: darken($color: $primary, $amount: 8);*/
+}
+body::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+body::-webkit-scrollbar-thumb {
+    background: lighten($color: $primary, $amount: 35);
+    border-radius: 4px;
+    transition: all ease-in-out .3s;
+}
+body::-webkit-scrollbar-thumb:hover {
+    transition: all ease-in-out .3s;
+    background:lighten($color: $primary, $amount: 30);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
